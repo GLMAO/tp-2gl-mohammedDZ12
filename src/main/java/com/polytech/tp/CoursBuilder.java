@@ -51,7 +51,7 @@ public class CoursBuilder {
     }
 
     public Cours build() {
-        return new Cours(matiere, enseignant, salle, date, heureDebut,
-                estOptionnel, niveau, necessiteProjecteur);
+        // TODO: Vous pouvez ajouter des validations ici
+        return new Cours(matiere, enseignant, salle, date, heureDebut, estOptionnel, niveau, necessiteProjecteur);
     }
 }

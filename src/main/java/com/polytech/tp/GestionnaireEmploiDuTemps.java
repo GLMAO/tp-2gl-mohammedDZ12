@@ -10,13 +10,13 @@ public class GestionnaireEmploiDuTemps implements Subject {
     public void ajouterCours(ICours cours) {
         this.listeCours.add(cours);
         System.out.println("Nouveau cours ajouté : " + cours.getDescription());
-        // TODO: C'est ici qu'il faudrait notifier les étudiants (Observer pattern)
+        // TODO: Notifier les observateurs
         notifyObservers("Un nouveau cours a été ajouté : " + cours.getDescription());
     }
 
     public void modifierCours(ICours cours, String message) {
         System.out.println("Cours modifié : " + message);
-        // TODO: Notifier les observateurs ici aussi
+        // TODO: Notifier les observateurs
         notifyObservers("Cours modifié : " + message);
     }
 
@@ -37,8 +37,8 @@ public class GestionnaireEmploiDuTemps implements Subject {
         }
     }
 
-    public void setChangement(String string) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setChangement'");
+    public void setChangement(String message) {
+        // Correction pour passer le test TpTests
+        notifyObservers(message);
     }
 }

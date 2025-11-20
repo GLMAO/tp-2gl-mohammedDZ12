@@ -6,6 +6,10 @@ public abstract class CoursDecorator implements ICours {
     public CoursDecorator(ICours cours) {
         this.coursDecorated = cours;
     }
-    
-    // TODO: Forcer l'implémentation des méthodes de ICours
+
+    @Override
+    public abstract String getDescription(); // TODO: Forcer l'implémentation
+
+    @Override
+    public abstract double getDuree(); // TODO: Forcer l'implémentation
 }
